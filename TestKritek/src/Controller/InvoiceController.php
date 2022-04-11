@@ -34,7 +34,7 @@ class InvoiceController extends AbstractController
             $tva = 0.18;
             foreach ($invoicesLines as $invoiceLine) {
                 $amount = ($invoiceLine->getQuantity()) * ($invoiceLine->getAmount());
-                $amount_vat =$amount*$tva;
+                $amount_vat = ($amount)*($tva) ;
                 $total = $amount + $amount_vat;
                 $invoiceLine->setInvoiceId($invoice);
                 $invoiceLine->setVATAmount($amount_vat);
