@@ -1,0 +1,10 @@
+I have some trouble to export my database that's why i push the makefileon github to facilitate you to generate a database
+Run the following commands 
+    make create //create database
+    make migration // make migration
+    make migrate // migrate database on localhost
+
+Thank you for understanding
+
+$command = "mysqldump -uMYSQL-USER -h server -pMYSQL-USER database_name > Téléchargements//file.sql";
+exec($command, $output, $return_var);
